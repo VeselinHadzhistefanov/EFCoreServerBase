@@ -21,7 +21,7 @@ namespace WebAPI.Controllers {
     // GET api/values
     [HttpGet]
     public IActionResult Get() {
-      IActionResult ret = null;
+      IActionResult? ret = null;
       List<Product> list = new List<Product>();
 
       try {
@@ -42,13 +42,20 @@ namespace WebAPI.Controllers {
 
     [HttpGet("{id}")]
     public IActionResult Get(int id) {
-      IActionResult ret = null;
-      Product entity = null;
+      IActionResult? ret = null;
+      Product? entity = null;
 
       try {
         // Declare 'entity' outside the using to avoid it
         // being disposed before it is returned.
-        entity = _DbContext.Products.Find(id);
+        try{
+          entity = _DbContext.Products.Find(id);
+        } catch (Exception e)
+        {
+          HandleException(e,"There is an error retrieving entities with the the ID: "
+            + id + ". The value retrieved is:"
+            + _DbContext.Products.Find(id));
+        }
         if (entity != null) {
           ret = StatusCode(StatusCodes.Status200OK, entity);
         } else {
@@ -67,7 +74,7 @@ namespace WebAPI.Controllers {
 
     [HttpPost()]
     public IActionResult Post(Product entity) {
-      IActionResult ret = null;
+      IActionResult? ret = null;
 
       try {
         if (entity != null) {
@@ -95,14 +102,14 @@ namespace WebAPI.Controllers {
     }
 
     [HttpPut("{id}")]
-    public IActionResult Put(int id, Product entity) {
-      IActionResult ret = null;
+    public IActionResult? Put(int id, Product entity) {
+      IActionResult? ret = null;
 
       try {
         if (entity != null) {
           // Since we don't send all the data down, 
           // read in existing entity, and overwrite changed properties
-          Product changed = _DbContext.Products.Find(id);
+          Product? changed = _DbContext.Products.Find(id);
           if (changed != null) {
             changed.Name = entity.Name;
             changed.ProductNumber = entity.ProductNumber;
@@ -138,8 +145,8 @@ namespace WebAPI.Controllers {
 
     [HttpDelete("{id}")]
     public IActionResult Delete(int id) {
-      IActionResult ret = null;
-      Product entity = null;
+      IActionResult? ret = null;
+      Product? entity = null;
 
       try {
         entity = _DbContext.Products.Find(id);

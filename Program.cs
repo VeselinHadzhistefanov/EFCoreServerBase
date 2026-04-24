@@ -9,7 +9,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
-
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 namespace WebAPI
 {
@@ -19,12 +20,8 @@ namespace WebAPI
     {
       //CreateHostBuilder(args).Build().Run();
       var builder = WebApplication.CreateBuilder(args);
-      var app = builder.Build();
-
       var services = builder.Services;
-      // Tell this project to allow CORS
-      services.AddCors();
-      
+
       // Convert JSON from Camel Case to Pascal Case
       services.AddControllers().AddJsonOptions(options =>
       {
@@ -32,6 +29,27 @@ namespace WebAPI
             JsonNamingPolicy.CamelCase;
       });
 
+      services.AddDbContext<AdventureWorksLTDbContext>(options =>
+      {
+        options.UseSqlServer(
+          builder.Configuration.GetConnectionString("DefaultConnection")
+        );
+      });
+
+      services.AddControllers();
+
+      services.AddSwaggerGen(c =>
+      {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
+      });
+      //builder.Services.AddOpenApi();
+
+      var app = builder.Build();
+      app.UseHttpsRedirection();
+      app.UseAuthorization();
+      app.UseCors();
+      app.MapControllers();
+      app.Run();
     }
 
     // public static IHostBuilder CreateHostBuilder(string[] args) =>

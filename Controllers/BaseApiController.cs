@@ -2,14 +2,17 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 
-namespace WebAPI.Controllers {
-  public class BaseApiController : ControllerBase {
+namespace WebAPI.Controllers
+{
+  public class BaseApiController : ControllerBase
+  {
     protected IActionResult HandleException(Exception ex,
-      string msg) {
+      string msg)
+    {
       IActionResult ret;
 
       // TODO: Publish exceptions here
-
+      msg += " Exception error: ```" + ex.Message + "```";
       // Create new exception with generic message        
       ret = StatusCode(StatusCodes.Status500InternalServerError,
               new Exception(msg));

@@ -1,150 +1,41 @@
 {
   "version": 2,
-  "dgSpecHash": "u2J/SWf6LLM=",
+  "dgSpecHash": "vFNLggXqVIc=",
   "success": true,
   "projectFilePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
   "expectedPackageFiles": [
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.aspnetcore.cors/2.2.0/microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.data.sqlclient/2.0.1/microsoft.data.sqlclient.2.0.1.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.0.1/microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore/5.0.2/microsoft.entityframeworkcore.5.0.2.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.2/microsoft.entityframeworkcore.abstractions.5.0.2.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.analyzers/5.0.2/microsoft.entityframeworkcore.analyzers.5.0.2.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.relational/5.0.2/microsoft.entityframeworkcore.relational.5.0.2.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.sqlserver/5.0.2/microsoft.entityframeworkcore.sqlserver.5.0.2.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identity.client/4.14.0/microsoft.identity.client.4.14.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.jsonwebtokens/5.6.0/microsoft.identitymodel.jsonwebtokens.5.6.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.logging/5.6.0/microsoft.identitymodel.logging.5.6.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.protocols/5.6.0/microsoft.identitymodel.protocols.5.6.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/5.6.0/microsoft.identitymodel.protocols.openidconnect.5.6.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.tokens/5.6.0/microsoft.identitymodel.tokens.5.6.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/newtonsoft.json/10.0.1/newtonsoft.json.10.0.1.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.configuration.configurationmanager/4.7.0/system.configuration.configurationmanager.4.7.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.drawing.common/4.7.0/system.drawing.common.4.7.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.identitymodel.tokens.jwt/5.6.0/system.identitymodel.tokens.jwt.5.6.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.runtime.caching/4.7.0/system.runtime.caching.4.7.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.security.cryptography.protecteddata/4.7.0/system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.security.permissions/4.7.0/system.security.permissions.4.7.0.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.text.json/5.0.1/system.text.json.5.0.1.nupkg.sha512",
-    "/Users/veselinhadzhistefanov/.nuget/packages/system.windows.extensions/4.7.0/system.windows.extensions.4.7.0.nupkg.sha512"
+    "/Users/veselinhadzhistefanov/.nuget/packages/azure.core/1.47.1/azure.core.1.47.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/azure.identity/1.14.2/azure.identity.1.14.2.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.bcl.cryptography/9.0.4/microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.data.sqlclient/6.1.1/microsoft.data.sqlclient.6.1.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.data.sqlclient.sni.runtime/6.0.2/microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore/10.0.0/microsoft.entityframeworkcore.10.0.0.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.0/microsoft.entityframeworkcore.abstractions.10.0.0.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.0/microsoft.entityframeworkcore.analyzers.10.0.0.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.0/microsoft.entityframeworkcore.relational.10.0.0.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.entityframeworkcore.sqlserver/10.0.0/microsoft.entityframeworkcore.sqlserver.10.0.0.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identity.client/4.73.1/microsoft.identity.client.4.73.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identity.client.extensions.msal/4.73.1/microsoft.identity.client.extensions.msal.4.73.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.abstractions/7.7.1/microsoft.identitymodel.abstractions.7.7.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.7.1/microsoft.identitymodel.jsonwebtokens.7.7.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.logging/7.7.1/microsoft.identitymodel.logging.7.7.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.protocols/7.7.1/microsoft.identitymodel.protocols.7.7.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.7.1/microsoft.identitymodel.protocols.openidconnect.7.7.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.identitymodel.tokens/7.7.1/microsoft.identitymodel.tokens.7.7.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.openapi/1.6.22/microsoft.openapi.1.6.22.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/microsoft.sqlserver.server/1.0.0/microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore/7.3.2/swashbuckle.aspnetcore.7.3.2.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore.swagger/7.3.2/swashbuckle.aspnetcore.swagger.7.3.2.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore.swaggergen/7.3.2/swashbuckle.aspnetcore.swaggergen.7.3.2.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/swashbuckle.aspnetcore.swaggerui/7.3.2/swashbuckle.aspnetcore.swaggerui.7.3.2.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/system.clientmodel/1.5.1/system.clientmodel.1.5.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/system.configuration.configurationmanager/9.0.4/system.configuration.configurationmanager.9.0.4.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/system.identitymodel.tokens.jwt/7.7.1/system.identitymodel.tokens.jwt.7.7.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/system.security.cryptography.pkcs/9.0.4/system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
+    "/Users/veselinhadzhistefanov/.nuget/packages/system.security.cryptography.protecteddata/9.0.4/system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "message": "PackageReference Microsoft.AspNetCore.Cors will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "Microsoft.AspNetCore.Cors",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "message": "PackageReference System.Text.Json will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "message": "Package 'Microsoft.Data.SqlClient' 2.0.1 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8g2p-5pqh-5jmc",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "Microsoft.Data.SqlClient",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Microsoft.Data.SqlClient' 2.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "Microsoft.Data.SqlClient",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "message": "Package 'Microsoft.IdentityModel.JsonWebTokens' 5.6.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "Microsoft.IdentityModel.JsonWebTokens",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'Newtonsoft.Json' 10.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "message": "Package 'Swashbuckle.AspNetCore.SwaggerUI' 5.6.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-qrmm-w75w-3wpx",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "Swashbuckle.AspNetCore.SwaggerUI",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1904",
-      "level": "Warning",
-      "message": "Package 'System.Drawing.Common' 4.7.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "System.Drawing.Common",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1902",
-      "level": "Warning",
-      "message": "Package 'System.IdentityModel.Tokens.Jwt' 5.6.0 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "warningLevel": 1,
-      "filePath": "/Users/veselinhadzhistefanov/source/test/WebAPI/WebAPI.csproj",
-      "libraryId": "System.IdentityModel.Tokens.Jwt",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }
