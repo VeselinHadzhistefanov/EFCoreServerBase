@@ -29,7 +29,7 @@ namespace WebAPI
             JsonNamingPolicy.CamelCase;
       });
 
-      services.AddDbContext<AdventureWorksLTDbContext>(options =>
+      services.AddDbContext<SofiLoveHoleDbContext>(options =>
       {
         options.UseSqlServer(
           builder.Configuration.GetConnectionString("DefaultConnection")

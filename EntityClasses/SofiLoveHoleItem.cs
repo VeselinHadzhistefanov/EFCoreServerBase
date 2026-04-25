@@ -4,13 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebAPI
 {
-  [Table("SofiLoveHoleItems", Schema ="")]
+  [Table("sofi_love_hole_items", Schema ="dbo")]
   public partial class SofiLoveHoleItem
   {
     [Required]
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public string name {get; set;}
+    public string? item {get; set;}
 
     [Required]
     public int variations {get; set;}
