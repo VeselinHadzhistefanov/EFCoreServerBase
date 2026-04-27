@@ -9,18 +9,31 @@ namespace WebAPI
       DbContextOptions<SofiLoveHoleDbContext> options)
       : base(options){
     }
-    // DefaultConnection": "server=localhost;database=sofi_love_hole;trusted_connection=false;User Id=sa;Password=PeacefulPanda1234@@@@;Persist Security Info=False;Encrypt=False
-    // Server={Server Name\Instance Name};Initial Catalog={Database Name};User Id={SQL Authenticated UserName};Password={SQL Authenticated Password};
+    // server=localhost;database=sofi_love_hole;trusted_connection=false;User Id=sa;Password=PeacefulPanda1234@@@@;Persist Security Info=False;Encrypt=False
+    // Server={Server Name\Instance Name};Initial Catalog={Database Name};User Id={SQL Authenticated UserName};Password={SQL Authenticated Password}
+    // Server=tcp:localhost,1433;Persist Security Info=False;trusted_connection=false;User ID=sa;Password=PeacefulPanda1234@@@@;Initial Catalog=sofi_love_hole;Encrypt=False
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       base.OnConfiguring(optionsBuilder);
       //172.17.0.2
-      string cs1 = "server=localhost;database=sofi_love_hole;trusted_connection=false;User Id=sa;Password=PeacefulPanda1234@@@@;Persist Security Info=False;Encrypt=False";
+      //faf07b1a4529
+      string cs1 = "server=tcp:localhost,1433;database=sofi_love_hole;trusted_connection=false;User Id=sa;Password=PeacefulPanda1234@@@@;Persist Security Info=False;Encrypt=False";
       string cs2 = "server=172.17.0.2;Initial Catalog=sofi_love_hole;User Id=sa;Password=PeacefulPanda1234@@@@;TrustServerCertificate=True;Encrypt=true";
-      //cs1 = @"Server=tcp:localhost,1433;Persist Security Info=False;trusted_connection=false;User ID=sa;Password=PeacefulPanda1234@@@@;Initial Catalog=sofi_love_hole;Encrypt=False";
-      
+      string cs3 = "server=faf07b1a4529;database=sofi_love_hole;trusted_connection=false;User Id=sa;Password=PeacefulPanda1234@@@@;Persist Security Info=False;Encrypt=False";
+
+      // string[][] cs = [];
+      // cs[0] = ["server=tcp:localhost,1433", "server=localhost,1433", "server=localhost", "server=172.17.0.2", "server=172.17.0.2,1433"];
+      // cs[1] = ["database=sofi_love_hole", "Initial Catalog=sofi_love_hole"];
+      // cs[2] = ["User Id=sa", "User ID=sa"];
+      // cs[3] = ["Password=Peacefulpanda1234@@@@"];
+      // cs[4] = ["trusted_connection=false", ""];
+      // cs[5] = ["Persist Security Info=False",""];
+      // cs[6] = ["Encrypt=False",""];
+
+      cs1 = "server=tcp:localhost,1433;database=sofi_love_hole;trusted_connection=false;User Id=sa;Password=PeacefulPanda1234@@@@;Persist Security Info=False;Encrypt=False";
+ 
       optionsBuilder.UseSqlServer(
-        cs2, builder =>
+        cs1, builder =>
         {
             builder.EnableRetryOnFailure(5, System.TimeSpan.FromSeconds(1), null);
         });

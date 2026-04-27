@@ -9,8 +9,8 @@ namespace WebAPI
   {
     [Required]
     [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public string? item {get; set;}
+    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public string item {get; set;}
 
     [Required]
     public int variations {get; set;}

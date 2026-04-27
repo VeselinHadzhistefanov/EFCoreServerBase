@@ -21,7 +21,7 @@ namespace WebAPI
       //CreateHostBuilder(args).Build().Run();
       var builder = WebApplication.CreateBuilder(args);
       var services = builder.Services;
-
+  
       // Convert JSON from Camel Case to Pascal Case
       services.AddControllers().AddJsonOptions(options =>
       {
@@ -31,8 +31,9 @@ namespace WebAPI
 
       services.AddDbContext<SofiLoveHoleDbContext>(options =>
       {
+        var connectionString = builder.Configuration.GetConnectionString("SofiLoveHoleDbContext");
         options.UseSqlServer(
-          builder.Configuration.GetConnectionString("DefaultConnection")
+          connectionString
         );
       });
 
@@ -57,6 +58,6 @@ namespace WebAPI
     //         .ConfigureWebHostDefaults(webBuilder =>
     //         {
     //             webBuilder.UseStartup<Startup>();
-    //         });   
+    //         }); 
   }
 }

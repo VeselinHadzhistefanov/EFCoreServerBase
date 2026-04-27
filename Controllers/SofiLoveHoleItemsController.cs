@@ -29,15 +29,34 @@ namespace WebAPI.Controllers
 
             try
             {
-                if(_DbContext.SofiLoveHoleItems.Count() > 0)
+                if (_DbContext.SofiLoveHoleItems.Count() > 0)
                 {
-                    list = _DbContext.SofiLoveHoleItems.OrderBy(v => v.item).ToList();
-                    ret = StatusCode(StatusCodes.Status200OK, ret);
-                } else
+                    int itemCount = _DbContext.SofiLoveHoleItems.Count();
+                    string result = "Number of items Sofi owns: " + _DbContext.SofiLoveHoleItems.Count().ToString() + "\n";
+                    //list = _DbContext.SofiLoveHoleItems.OrderBy(v => v.item).ToList();
+                    list = _DbContext.SofiLoveHoleItems.OrderBy(v => string.Compare("0", v.item)).ToList();
+
+                    // Type t = list[0].GetType();
+                    // var fields = t.GetFields();
+
+                    for (int i = 0; i < itemCount; i++)
+                    {
+                        var item = list[i];
+                        result += "Number " + i + 
+                            " item: " + item.item + 
+                            ", Sofi owns " + item.num + 
+                            ". Item has " + 
+                            item.variations + "+ variations. \n";
+                    }
+
+                    ret = StatusCode(StatusCodes.Status200OK, result);
+                }
+                else
                 {
                     ret = StatusCode(StatusCodes.Status404NotFound, "Unable to retrieve values of " + ENTITY_NAME + " in the system");
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 ret = HandleException(e, "Exception trying to get all " + ENTITY_NAME + " values.");
             }
