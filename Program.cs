@@ -38,6 +38,7 @@ namespace WebAPI
       });
 
       services.AddControllers();
+      services.AddLogging(builder => builder.AddConsole());
 
       services.AddSwaggerGen(c =>
       {

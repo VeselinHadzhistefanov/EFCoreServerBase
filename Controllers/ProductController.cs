@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace WebAPI.Controllers {
   [Route("api/[controller]")]
@@ -10,8 +11,8 @@ namespace WebAPI.Controllers {
   public class ProductController :
     BaseApiController {
     public ProductController(
-      AdventureWorksLTDbContext context)
-      : base() {
+      AdventureWorksLTDbContext context, ILogger<BaseApiController> logger)
+      : base(logger) {
       _DbContext = context;
     }
 

@@ -1,11 +1,12 @@
+
 using Microsoft.EntityFrameworkCore;
 
 namespace WebAPI
 {
-  public partial class SofiLoveHoleDbContext : DbContext
+  public partial class SofiLoveDeepDbContext : DbContext
   {
-    public SofiLoveHoleDbContext(
-      DbContextOptions<SofiLoveHoleDbContext> options)
+    public SofiLoveDeepDbContext(
+      DbContextOptions<SofiLoveDeepDbContext> options)
       : base(options)
     {
     }
@@ -15,7 +16,7 @@ namespace WebAPI
 
       string cs1 = @"
         server=localhost,1401;
-        database=sofi_love_hole;
+        database=sofi_love_deep;
         user id=sa;
         password=PeacefulPanda1234@@@@;
         encrypt=false;

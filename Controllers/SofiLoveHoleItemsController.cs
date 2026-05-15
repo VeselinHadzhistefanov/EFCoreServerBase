@@ -6,6 +6,7 @@ using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic;
 
 namespace WebAPI.Controllers
@@ -20,7 +21,7 @@ namespace WebAPI.Controllers
         {"variations", " with {0} variations"},
         {"num", ", Sofi owns {0}."}
     };
-    public SofiLoveHoleItemsController(SofiLoveHoleDbContext context) : base()
+    public SofiLoveHoleItemsController(SofiLoveHoleDbContext context, ILogger<BaseApiController> logger) : base(logger)
     {
       _DbContext = context;
     }
@@ -74,12 +75,14 @@ namespace WebAPI.Controllers
     {
       var ret = "";
       var properties = entry.GetType().GetProperties();
-      Dictionary<string, string> pattern_dict ;
+      Dictionary<string, string> pattern_dict;
 
-      if (typeof(T).Equals(typeof(SofiLoveHoleItem))){
-        pattern_dict = new Dictionary<string, string>{{"item", "{0}"}, {"variations", ", with {0} variations. "}, {"num", "Sofi owns {0}."}};
+      if (typeof(T).Equals(typeof(SofiLoveHoleItem)))
+      {
+        pattern_dict = new Dictionary<string, string> { { "item", "{0}" }, { "variations", ", with {0} variations. " }, { "num", "Sofi owns {0}." } };
       }
-      else {
+      else
+      {
         return entry == null ? "" : entry.ToString()!;
       }
 
@@ -92,6 +95,7 @@ namespace WebAPI.Controllers
 
         ret += label;
       }
+      HandleLogData(ret);
 
       return ret;
     }
